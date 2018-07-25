@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>百科词云</title>
+</head>
+<body>
+<div id = "search">
+    <form action="/index/" method="post">
+        <input name="keyword"  type="text" placeholder="请输入关键词" value=""/>
+        <button id="submit" type="submit">搜索词云</button>
+        {% csrf_token %}
+    </form>
+
+</div>
+{% if content != null %}
+    <div id = "cloudImg">
+    <img src="{ content }">
+    </div>
+{% endif %}
+</body>
+</html>
